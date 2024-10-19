@@ -14,6 +14,10 @@ export default {
   name: 'App',
   components: {
     NavBar
+  },
+  mounted() {
+    // You can also trigger navigation to Home on component mount
+    this.$router.push('/');
   }
 }
 </script>
