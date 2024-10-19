@@ -16,12 +16,7 @@ export default {
   components: {
     Home,
     NavBar
-  },
-  mounted() {
-    // You can also trigger navigation to Home on component mount
-    this.$router.push('/');
-  },
-
+  }
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
