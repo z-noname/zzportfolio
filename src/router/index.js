@@ -5,6 +5,7 @@ import Contact from '../components/Contact.vue';
 
 const routes = [
     { path: '/', component: Home },
+    { path: '/zzportfolio', component: Home },
     { path: '/about', component: About },
     { path: '/contact', component: Contact },
 ];
