@@ -1,67 +1,46 @@
-<script setup>
-
+<script>
+export default {
+  data() {
+    return {
+      isMenuOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+  },
+};
 </script>
 
 <template>
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="navbar-brand">
-        <router-link to="/" class="brand-link">ZNoname</router-link>
-      </div>
-      <ul class="navbar-menu">
-        <li><router-link to="/">Home</router-link></li>
+  <nav class="bg-sky-50	p-3 fixed w-full z-10 border border-sky-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Brand/Logo -->
+      <router-link to="/" class="text-gray-800 text-lg font-semibold">ZNoname</router-link>
+
+      <!-- Mobile Menu Button (Visible only on mobile) -->
+      <button
+          class="block text-gray-500 md:hidden focus:outline-none"
+          @click="toggleMenu"
+      >
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Navbar Links (Hidden on mobile, visible on md and above) -->
+      <ul :class="{'block': isMenuOpen, 'hidden': !isMenuOpen}" class="hidden md:flex space-x-4">
+        <li>
+          <router-link to="/" class="text-gray-800 hover:bg-gray-300 text-sm px-3 py-1 rounded cursor-pointer">Home</router-link>
+        </li>
+        <!-- Add more links as needed -->
       </ul>
     </div>
   </nav>
 </template>
 
 <style scoped>
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Stay on top */
-  background-color: aliceblue;
-
-}
-
-.navbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 250px; /* Adjust padding as needed */
-}
-
-.brand-link {
-  font-size: 24px;
-  font-weight: bold;
-  color: black; /* Vue.js brand color */
-  text-decoration: none;
-}
-
-.navbar-menu {
-  list-style: none;
-  display: flex;
-  gap: 20px; /* Space between menu items */
-}
-
-.navbar-menu li {
-  position: relative; /* For dropdown positioning */
-}
-
-.navbar-menu a {
-  color: black;
-  text-decoration: none;
-  padding: 8px 12px;
-  transition: background 0.3s;
-}
-
-.navbar-menu a:hover {
-  background: lightgray; /* Highlight on hover */
-  border-radius: 5px;
-}
-
 
 </style>
