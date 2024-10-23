@@ -8,6 +8,7 @@ import Vue from 'vue'
 import './assets/tailwind.css';
 
 const app = createApp(App);
-
+app.config.productionTip = false; // Disable the production tip
+app.config.devtools = false;      // Disable Vue devtools
 app.mount('#app');
 //createApp(App).use(router).mount('#app');
