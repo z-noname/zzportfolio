@@ -11,6 +11,8 @@
     "@vue/compiler-sfc": "^3.5.12",
     "bootstrap": "^5.3.3",
     "core-js": "^3.8.3",
+    "node": "^22.10.0",
+    "shadcn": "^2.1.1",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },

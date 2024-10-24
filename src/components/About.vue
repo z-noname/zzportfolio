@@ -6,6 +6,14 @@
   <div>
     <h2>About Page</h2>
     <p>Information about the app.</p>
+    <p>Information about the app.</p>
+    <p>Information about the app.</p>
+    <p>Information about the app.</p>
+    <p>Information about the app.</p>
+
+
+
+
   </div>
 </template>
 
